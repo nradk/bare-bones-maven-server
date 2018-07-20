@@ -10,6 +10,7 @@ const basic = auth.basic({
 });
 
 const FILE_ROOT = "maven";
+const HTTP_PORT = 8080;
 
 app.use(auth.connect(basic));
 app.put('*', function(req,res,next) {
@@ -44,4 +45,5 @@ app.put('*', function(req,res,next) {
 
 app.use(express.static('maven'));
 
-app.listen(3000, () => console.log("Maven server listening on port 3000!"));
+app.listen(HTTP_PORT, () => console.log("Maven server listening on port "
+    + HTTP_PORT + "!"));
