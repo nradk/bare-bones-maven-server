@@ -71,3 +71,6 @@ typings/
 
 # Serverless directories
 .serverless
+
+# Our maven artifact directory
+maven/
